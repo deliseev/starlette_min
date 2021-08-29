@@ -29,17 +29,17 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6, <4',
-    install_requires=[],
+    install_requires=[
+        'starlette==0.16.0',
+    ],
     extras_require={
         'dev': ['check-manifest'],
         'test': [
             'flake8',
             'pytest',
-            'coverage'
+            'coverage',
+            'requests',
         ],
-    },
-    package_data={
-        'sample': ['package_data.dat'],
     },
     data_files=[('my_data', ['data/data_file'])],
     entry_points={
