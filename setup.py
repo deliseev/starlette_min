@@ -6,8 +6,8 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
-    name='sampleproject',
-    description='A sample Python project',
+    name='app',
+    description='Starlette minimal app',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/deliseev/starlette_min',
@@ -29,10 +29,14 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6, <4',
-    install_requires=['peppercorn'],
+    install_requires=[],
     extras_require={
         'dev': ['check-manifest'],
-        'test': ['coverage'],
+        'test': [
+            'flake8',
+            'pytest',
+            'coverage'
+        ],
     },
     package_data={
         'sample': ['package_data.dat'],
