@@ -32,9 +32,14 @@ setup(
     install_requires=[
         'starlette==0.16.0',
         'uvicorn==0.15.0',
+        'sqlalchemy==0.14.23',
+        'alembic==1.6.5',
+        'asyncpg==0.24.0',
     ],
     extras_require={
-        'dev': ['check-manifest'],
+        'dev': [
+            'sqlalchemy2-stubs',
+        ],
         'test': [
             'flake8',
             'pytest',
