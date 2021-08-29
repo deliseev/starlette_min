@@ -26,11 +26,11 @@ target_metadata = metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-if os.getenv('GITHUB_ACTIONS'):
-    config.set_main_option('sqlalchemy.url', 'postgresql+asyncpg://postgres:postgres@postgres/app_test')
-else:
-    testing = '_test' if os.getenv('TESTING') else ''
-    config.set_main_option('sqlalchemy.url', f'postgresql+asyncpg://unicom:unicom@localhost/app{testing}')
+config.set_main_option('sqlalchemy.url', 'postgresql+asyncpg://postgres:postgres@postgres/app_test')
+# if os.getenv('GITHUB_ACTIONS'):
+# else:
+#     testing = '_test' if os.getenv('TESTING') else ''
+#     config.set_main_option('sqlalchemy.url', f'postgresql+asyncpg://unicom:unicom@localhost1/app{testing}')
 
 
 def run_migrations_offline():
