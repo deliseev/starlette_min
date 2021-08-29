@@ -26,7 +26,7 @@ target_metadata = metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-config.set_main_option('sqlalchemy.url', 'postgresql+asyncpg://postgres:postgres@postgres/app_test')
+config.set_main_option('sqlalchemy.url', 'postgresql+asyncpg://postgres:postgres@postgres/postgres')
 # if os.getenv('GITHUB_ACTIONS'):
 # else:
 #     testing = '_test' if os.getenv('TESTING') else ''
