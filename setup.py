@@ -31,6 +31,7 @@ setup(
     python_requires='>=3.6, <4',
     install_requires=[
         'starlette==0.16.0',
+        'uvicorn==0.15.0',
     ],
     extras_require={
         'dev': ['check-manifest'],
@@ -43,7 +44,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'sample=sample:main',
+            'run=app.main',
         ],
     },
     project_urls={
