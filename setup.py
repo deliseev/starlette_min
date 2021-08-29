@@ -32,7 +32,7 @@ setup(
     install_requires=[
         'starlette==0.16.0',
         'uvicorn==0.15.0',
-        'sqlalchemy==0.14.23',
+        'sqlalchemy==1.4.23',
         'alembic==1.6.5',
         'asyncpg==0.24.0',
     ],
