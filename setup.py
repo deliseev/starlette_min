@@ -41,7 +41,6 @@ setup(
             'requests',
         ],
     },
-    data_files=[('my_data', ['data/data_file'])],
     entry_points={
         'console_scripts': [
             'sample=sample:main',
